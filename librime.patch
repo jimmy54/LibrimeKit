@@ -60,9 +60,9 @@ index 0000000..81d429e
 +## Get the code
 +
 +``` sh
-+git clone --recursive https://github.com/rime/librime.git
++git clone --recursive https://github.com/jimmy54/librime.git
 +```
-+or [download from GitHub](https://github.com/rime/librime), then get code for
++or [download from GitHub](https://github.com/jimmy54/librime), then get code for
 +third-party dependencies separately.
 +
 +## Install Boost C++ for iOS libraries
