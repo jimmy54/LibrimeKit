@@ -18,6 +18,11 @@ fi
 rm -rf ${RIME_ROOT}/librime/plugins/lua
 ${RIME_ROOT}/librime/install-plugins.sh imfuxiao/librime-lua@main
 
+# install predictor
+rm -rf ${RIME_ROOT}/librime/plugins/predict
+${RIME_ROOT}/librime/install-plugins.sh rime/librime-predict@master
+
+
 # install charcode
 #rm -rf ${RIME_ROOT}/librime/plugins/librime-charcode
 #${RIME_ROOT}/librime/install-plugins.sh rime/librime-charcode
@@ -34,6 +39,7 @@ extern void rime_require_module_dict();\
 extern void rime_require_module_gears();\
 extern void rime_require_module_levers();\
 extern void rime_require_module_lua();\
+extern void rime_require_module_predict();\
 // link to default modules explicitly when building static library.\
 static void rime_declare_module_dependencies() {\
   rime_require_module_core();\
@@ -41,6 +47,7 @@ static void rime_declare_module_dependencies() {\
   rime_require_module_gears();\
   rime_require_module_levers();\
   rime_require_module_lua();\
+  rime_require_module_predict();\
 }\
 #endif\
 ' ${RIME_ROOT}/librime/src/rime_api.cc
